@@ -10,4 +10,7 @@ class SubtractionOperationConfiguration {
     SubtractionOperation subtractionOperation() {
         return new SubtractionOperation();
     }
+
+    @Bean
+    DivisionOperation divisionOperation(){return new DivisionOperation("NieWolno przez 0");}
 }

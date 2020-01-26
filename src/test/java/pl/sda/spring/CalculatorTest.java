@@ -77,7 +77,7 @@ public class CalculatorTest {
     }
 
     @Test(expected = DivisionByZeroException.class)
-    public void shouldReturnExepction(){
+    public void shouldReturnException(){
         //given
         double arg1 = 10.0;
         double arg2 = 0;
@@ -85,8 +85,8 @@ public class CalculatorTest {
         double actual = calculator.calculate(OperationType.DIVISION, arg1, arg2);
 
         //then
-//        Assert.assertEquals(0, actual, 0.000001);
-        Assert.assertEquals("Nie dziel przez 0 ",actual,0.00001);
+        Assert.assertEquals(0, actual, 0.000001);
+//        Assert.assertEquals(actual,0.00001);
     }
 
     @Test

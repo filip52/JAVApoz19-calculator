@@ -5,14 +5,19 @@ import pl.sda.spring.exception.DivisionByZeroException;
 
 @Component
 public class DivisionOperation implements Operation {
+
+    private final String exceptionMessage;
+    public DivisionOperation(String exceptionMessage){
+        this.exceptionMessage = exceptionMessage;
+    }
+
     @Override
     public double calculate(double arg1, double arg2) {
         DivisionByZeroException ex;
         if (arg2 == 0) {
-            throw new DivisionByZeroException("Nie przez 0");
-        } else {
-            return arg1 / arg2;
+            throw new DivisionByZeroException(exceptionMessage);
         }
+            return arg1 / arg2;
     }
 
     @Override
