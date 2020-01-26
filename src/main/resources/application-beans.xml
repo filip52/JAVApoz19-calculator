@@ -4,4 +4,6 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
     <bean id="multiplicationOperation" class="pl.sda.spring.operation.MultiplicationOperation"/>
+    <bean id="PowerOperation" class="pl.sda.spring.operation.PowerOperation"/>
 </beans>
+
